@@ -54,7 +54,9 @@ export default function RealisationCard({ r }: { r: Realisation }) {
       {/* CONTENU */}
       <div>
         <h2 className='text-xl font-semibold mb-3'>{r.title}</h2>
-        <p className='text-muted-foreground leading-relaxed'>{r.description}</p>
+        <p className='text-sm text-muted-foreground leading-relaxed'>
+          {r.description}
+        </p>
       </div>
       {/* CTA */}
       <span className='mt-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground group-hover:text-black transition'>

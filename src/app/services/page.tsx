@@ -1,3 +1,5 @@
+import Container from '@/components/ui/Container'
+
 export const metadata = {
   title: 'Services web freelance',
   description:
@@ -6,10 +8,10 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
-    <section className='container py-20 space-y-24'>
+    <Container className='py-24 space-y-24'>
       {/* Hero */}
-      <div className='text-center max-w-3xl mx-auto'>
-        <h1 className='text-4xl font-bold mb-6'>
+      <div className='space-y-4 text-center max-w-3xl mx-auto'>
+        <h1 className='text-4xl font-bold tracking-tight mb-6'>
           Des services web pensés pour faire grandir votre activité
         </h1>
         <p className='text-xl text-muted-foreground'>
@@ -20,8 +22,13 @@ export default function ServicesPage() {
       {/* Services */}
       <div className='grid md:grid-cols-2 gap-12'>
         {services.map((service) => (
-          <div key={service.title} className='border rounded-2xl p-8'>
-            <h2 className='text-2xl font-semibold mb-4'>{service.title}</h2>
+          <div
+            key={service.title}
+            className='border bg-white p-8 transition hover:shadow-lg rounded-2xl'
+          >
+            <h2 className='text-3xl font-semibold tracking-tight mb-4'>
+              {service.title}
+            </h2>
             <p className='mb-4 text-muted-foreground'>{service.problem}</p>
             <p className='font-medium'>{service.solution}</p>
           </div>
@@ -30,7 +37,9 @@ export default function ServicesPage() {
 
       {/* Méthode */}
       <div className='text-center'>
-        <h2 className='text-3xl font-bold mb-8'>Ma méthode de travail</h2>
+        <h2 className='text-3xl font-semibold tracking-tight mb-8'>
+          Ma méthode de travail
+        </h2>
         <ol className='flex flex-col md:flex-row justify-center gap-6'>
           {[
             'Analyse',
@@ -56,7 +65,7 @@ export default function ServicesPage() {
           Discutons de votre projet
         </a>
       </div>
-    </section>
+    </Container>
   )
 }
 

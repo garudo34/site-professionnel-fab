@@ -1,12 +1,13 @@
-// components/sections/Hero.tsx
-
 import FadeIn from '@/components/ui/FadeIn'
+import Container from '@/components/ui/Container'
 
 export default function Hero() {
   return (
-    <section className='container py-32 text-center'>
+    <Container className='py-24 space-y-24 text-center'>
       <FadeIn>
-        <h1 className='text-5xl font-bold mb-6'>Développeur web freelance</h1>
+        <h1 className='text-5xl font-bold tracking-tight mb-6'>
+          Développeur web freelance
+        </h1>
       </FadeIn>
 
       <FadeIn delay={0.2}>
@@ -24,6 +25,6 @@ export default function Hero() {
           Discutons de votre projet
         </a>
       </FadeIn>
-    </section>
+    </Container>
   )
 }

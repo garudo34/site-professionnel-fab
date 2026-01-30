@@ -1,7 +1,10 @@
 import { getRealisationBySlug, getAllRealisations } from '@/lib/mdx'
+import { getAdjacentRealisations } from '@/lib/mdx'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import Container from '@/components/ui/Container'
+import SectionTitle from '@/components/ui/SectionTitle'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -23,13 +26,13 @@ export default async function RealisationPage({ params }: Props) {
   }
 
   const { content, data } = getRealisationBySlug(slug)
+  const { prev, next } = getAdjacentRealisations(slug)
 
   return (
-    <article className='container py-24 space-y-24'>
+    <Container className='py-24 space-y-24'>
       {/* HERO */}
-
-      <header className='max-w-3xl'>
-        <h1 className='text-4xl font-bold mb-4'>{data.title}</h1>
+      <header className='space-y-4 max-w-3xl'>
+        <SectionTitle>{data.title}</SectionTitle>
         <p className='text-xl text-muted-foreground'>{data.description}</p>
       </header>
 
@@ -70,18 +73,18 @@ export default async function RealisationPage({ params }: Props) {
       )}
 
       <section className='grid md:grid-cols-3 gap-8'>
-        <div className='rounded-2xl border p-6'>
-          <h3 className='font-semibold mb-2'>🎯 Problème</h3>
+        <div className='rounded-2xl border bg-white p-6 transition hover:shadow-lg'>
+          <h3 className='text-xl font-semibold mb-2'>🎯 Problème</h3>
           <p>{data.problem}</p>
         </div>
 
-        <div className='rounded-2xl border p-6'>
-          <h3 className='font-semibold mb-2'>💡 Solution</h3>
+        <div className='rounded-2xl border bg-white p-6 transition hover:shadow-lg'>
+          <h3 className='text-xl font-semibold mb-2'>💡 Solution</h3>
           <p>{data.solution}</p>
         </div>
 
-        <div className='rounded-2xl border p-6'>
-          <h3 className='font-semibold mb-2'>🚀 Résultat</h3>
+        <div className='rounded-2xl border bg-white p-6 transition hover:shadow-lg'>
+          <h3 className='text-xl font-semibold mb-2'>🚀 Résultat</h3>
           <p>{data.result}</p>
         </div>
       </section>
@@ -90,8 +93,42 @@ export default async function RealisationPage({ params }: Props) {
         <MDXRemote source={content} />
       </div>
 
-      <section className='rounded-3xl border bg-neutral-50 py-16 text-center'>
-        <h2 className='text-3xl font-bold mb-4'>
+      <nav className='mt-24 grid grid-cols-1 md:grid-cols-2 gap-8'>
+        {prev ? (
+          <a
+            href={`/realisations/${prev.slug}`}
+            className='group rounded-2xl border bg-white p-6 transition hover:shadow-lg'
+          >
+            <span className='text-sm text-muted-foreground'>
+              ← Projet précédent
+            </span>
+            <h3 className='mt-2 text-xl font-semibold group-hover:underline'>
+              {prev.title}
+            </h3>
+          </a>
+        ) : (
+          <div />
+        )}
+
+        {next ? (
+          <a
+            href={`/realisations/${next.slug}`}
+            className='group rounded-2xl border bg-white p-6 transition hover:shadow-lg text-right '
+          >
+            <span className='text-sm text-muted-foreground'>
+              Projet suivant →
+            </span>
+            <h3 className='mt-2 text-xl font-semibold group-hover:underline'>
+              {next.title}
+            </h3>
+          </a>
+        ) : (
+          <div />
+        )}
+      </nav>
+
+      <section className='space-y-16 rounded-3xl border bg-white  transition hover:shadow-lg py-16 text-center'>
+        <h2 className='text-3xl font-semibold tracking-tight mb-4'>
           Vous avez un projet similaire ?
         </h2>
         <p className='text-muted-foreground mb-8'>
@@ -104,7 +141,7 @@ export default async function RealisationPage({ params }: Props) {
           Parlons de votre projet
         </a>
       </section>
-    </article>
+    </Container>
   )
 }
 

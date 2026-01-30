@@ -1,9 +1,13 @@
+import Container from '@/components/ui/Container'
+
 export default function ContactPage() {
   return (
-    <section className='container py-20 max-w-3xl space-y-12'>
+    <Container className='py-24 space-y-24 max-w-3xl'>
       {/* Hero */}
-      <header className='text-center'>
-        <h1 className='text-4xl font-bold mb-4'>Parlons de votre projet</h1>
+      <header className='space-y-4 text-center'>
+        <h1 className='text-4xl font-bold tracking-tight mb-4'>
+          Parlons de votre projet
+        </h1>
         <p className='text-xl text-muted-foreground'>
           Décrivez-moi votre besoin et je vous recontacte rapidement.
         </p>
@@ -85,6 +89,6 @@ export default function ContactPage() {
       <p className='text-center text-sm text-muted-foreground'>
         Réponse sous 24 à 48h • Aucun spam • Données confidentielles
       </p>
-    </section>
+    </Container>
   )
 }

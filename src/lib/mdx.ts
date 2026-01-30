@@ -5,7 +5,7 @@ import { Realisation, RealisationFrontmatter } from '@/types/realisation'
 
 const realisationsDirectory = path.join(
   process.cwd(),
-  'src/content/realisations'
+  'src/content/realisations',
 )
 
 export function getAllRealisations(): Realisation[] {
@@ -39,6 +39,24 @@ export function getRealisationBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   return matter(fileContents)
+}
+
+export function getAdjacentRealisations(slug: string): {
+  prev?: Realisation
+  next?: Realisation
+} {
+  const all = getAllRealisations().sort(
+    (a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime(),
+  )
+
+  const index = all.findIndex((r) => r.slug === slug)
+
+  if (index === -1) return {}
+
+  return {
+    prev: all[index - 1],
+    next: all[index + 1],
+  }
 }
 
 export type RealisationMeta = {
