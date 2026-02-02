@@ -1,6 +1,7 @@
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import BackToTop from '@/components/ui/BackTotop'
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 
@@ -47,7 +48,8 @@ export default function RootLayout({
         className={`${inter.variable} ${space.variable} min-h-screen flex flex-col`}
       >
         <Header />
-        <main className='flex-1'>{children}</main>
+        {children}
+        <BackToTop />
         <Footer />
       </body>
     </html>

@@ -32,7 +32,7 @@ export default async function RealisationPage({ params }: Props) {
     <Container className='py-24 space-y-24'>
       {/* HERO */}
       <header className='space-y-4 max-w-3xl'>
-        <SectionTitle>{data.title}</SectionTitle>
+        {/* <SectionTitle>{data.title}</SectionTitle> */}
         <p className='text-xl text-muted-foreground'>{data.description}</p>
       </header>
 
