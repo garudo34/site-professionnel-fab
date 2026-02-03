@@ -1,40 +1,63 @@
-export default function Contact() {
+import SectionTitle from '@/components/ui/SectionTitle'
+import { Mail } from 'lucide-react'
+
+export default function ContactSection() {
   return (
-    // <section id='contact' className='relative py-32 overflow-hidden'>
     <section
       id='contact'
-      className='relative bg-neutral-900 py-24 md:py-32 overflow-hidden'
+      className='relative overflow-hidden bg-neutral-900 py-32'
     >
+      {/* Gradient top */}
       <div
         aria-hidden
-        className='pointer-events-none absolute inset-0 bg-[radial-gradient(800px_circle_at_top,rgba(59,130,246,0.25),transparent_60%)]'
+        className='pointer-events-none absolute inset-0
+        bg-[radial-gradient(700px_circle_at_top,rgba(59,130,246,0.2),transparent_60%)]'
       />
 
-      <div className='container relative'>
-        <div className='relative overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/50 p-16 text-center'>
-          <h2 className='relative z-10 text-4xl font-bold mb-6'>
-            Un projet en tête ?
-          </h2>
+      {/* Gradient bottom */}
+      <div
+        aria-hidden
+        className='pointer-events-none absolute inset-0
+        bg-[radial-gradient(600px_circle_at_bottom,rgba(59,130,246,0.12),transparent_70%)]'
+      />
 
-          <p className='relative z-10 mb-10 text-lg text-neutral-400'>
-            Discutons ensemble de la meilleure solution pour votre activité.
+      {/* Content */}
+      <div className='container relative grid gap-16 md:grid-cols-2 items-center'>
+        {/* Texte */}
+        <div>
+          <SectionTitle subtitle='Discutons de votre projet'>
+            Contact
+          </SectionTitle>
+
+          <p className='text-lg text-neutral-200/80 mb-6'>
+            Vous avez un projet, une idée ou une question ? Je vous réponds
+            rapidement pour échanger sur vos besoins.
           </p>
 
-          <div className='relative z-10 flex justify-center gap-4'>
-            <a
-              href='mailto:contact@ton-email.fr'
-              className='inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-4 font-medium text-white hover:bg-blue-500 transition'
-            >
-              Me contacter
-            </a>
+          <p className='text-neutral-200/70'>
+            Que ce soit pour une création, une refonte ou une optimisation, je
+            vous accompagne avec une approche claire et pragmatique.
+          </p>
+        </div>
 
-            <a
-              href='#realisations'
-              className='inline-flex items-center justify-center rounded-xl border border-white/10 px-8 py-4 text-neutral-300 hover:bg-white/5 transition'
-            >
-              Voir mes projets
-            </a>
-          </div>
+        {/* Carte contact */}
+        <div className='rounded-2xl bg-neutral-800 border border-white/15 p-8'>
+          <h3 className='text-xl font-semibold mb-6'>Me contacter</h3>
+
+          <p className='text-sm text-neutral-200/80 mb-6'>
+            Décrivez-moi brièvement votre projet, je vous répondrai dans les
+            meilleurs délais.
+          </p>
+
+          <a
+            href='mailto:contact@fabien.dev'
+            className='inline-flex items-center gap-3 rounded-xl
+              bg-blue-600 px-6 py-4 text-white font-medium
+              hover:bg-blue-500 transition'
+          >
+            <Mail size={20} />
+            contact@fabien.dev
+          </a>
         </div>
       </div>
     </section>
