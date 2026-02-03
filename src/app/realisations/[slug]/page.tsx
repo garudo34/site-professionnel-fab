@@ -3,9 +3,8 @@ import { getAdjacentRealisations } from '@/lib/mdx'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import Container from '@/components/ui/Container'
-import SectionTitle from '@/components/ui/SectionTitle'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -157,10 +156,6 @@ export default async function RealisationPage({ params }: Props) {
             </p>
 
             <div className='flex flex-wrap gap-2 text-sm'>
-              <span className='rounded-full bg-white/10 px-4 py-1'>
-                Mock UI
-              </span>
-
               {data.services?.map((service: string) => (
                 <span
                   key={service}
@@ -180,9 +175,10 @@ export default async function RealisationPage({ params }: Props) {
 
           {/* Image */}
           <div className='relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-800'>
-            <img
+            <Image
               src={data.cover}
               alt={data.title}
+              fill
               className='object-cover w-full h-full'
             />
           </div>
