@@ -5,7 +5,7 @@ export default function ContactSection() {
   return (
     <section
       id='contact'
-      className='relative overflow-hidden bg-neutral-900 py-32'
+      className='relative overflow-hidden py-24 md:py-32 bg-neutral-900'
     >
       {/* Gradient top */}
       <div

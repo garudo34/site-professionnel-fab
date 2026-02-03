@@ -10,7 +10,6 @@ export default function Hero() {
         aria-hidden
         className='pointer-events-none absolute inset-0 bg-[radial-gradient(800px_circle_at_top,rgba(59,130,246,0.25),transparent_60%)]'
       />
-
       {/* Gradient bottom */}
       <div
         aria-hidden
@@ -36,7 +35,7 @@ export default function Hero() {
             et sur-mesure pour indépendants et PME.
           </p>
 
-          <div className='flex gap-4'>
+          <div className='grid grid-cols-1 md:flex gap-4'>
             <a
               href='#realisations'
               className='inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-4 font-medium text-white hover:bg-blue-500 transition shadow-[0_0_0_0_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_-10px_rgba(59,130,246,0.6)]'

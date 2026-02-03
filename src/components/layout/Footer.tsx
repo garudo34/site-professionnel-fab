@@ -3,9 +3,9 @@ import { Github, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className='border-t border-white/5 bg-neutral-950'>
+    <footer className='border-t border-white/10 bg-neutral-950/80 backdrop-blur'>
       <div className='container py-8'>
-        <div className='flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-neutral-500'>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-6 text-sm'>
           {/* Left */}
           <p className='text-xs'>© {new Date().getFullYear()} Fabien</p>
 

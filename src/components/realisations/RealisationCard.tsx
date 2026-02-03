@@ -18,7 +18,6 @@ export default function RealisationCard({ r }: { r: Realisation }) {
             fill
             className='object-cover transition-transform duration-500 group-hover:scale-105'
           />
-          {/* <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent' /> */}
         </div>
       )}
       {/* Content */}
