@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   },
   description:
     'Développeur web freelance spécialisé dans la création de sites vitrines modernes, rapides et optimisés SEO.',
+  // viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     title: 'Développeur web freelance',
     description: 'Sites web performants, modernes et orientés résultats.',

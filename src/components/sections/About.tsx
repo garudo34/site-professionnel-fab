@@ -1,6 +1,6 @@
 import SectionTitle from '@/components/ui/SectionTitle'
 
-export default function AboutSection() {
+export default function About() {
   return (
     <section
       id='about'
@@ -27,8 +27,9 @@ export default function AboutSection() {
           <SectionTitle subtitle='Quelques mots sur moi'>À propos</SectionTitle>
 
           <p className='text-lg text-neutral-200/80 mb-6'>
-            Développeur web freelance, j’accompagne indépendants et PME dans la
-            création de sites performants, modernes et pensés pour convertir.
+            Développeur web freelance basé en France, j’accompagne indépendants
+            et PME dans la création de sites performants, modernes et pensés
+            pour convertir.
           </p>
 
           <p className='text-neutral-200/70'>

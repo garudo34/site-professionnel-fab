@@ -7,7 +7,10 @@ export default function Footer() {
       <div className='container py-8'>
         <div className='flex flex-col md:flex-row items-center justify-between gap-6 text-sm'>
           {/* Left */}
-          <p className='text-xs'>© {new Date().getFullYear()} Fabien</p>
+          <p className='text-xs'>
+            © {new Date().getFullYear()} Fabien — Développeur web freelance —
+            sites modernes et performants
+          </p>
 
           {/* Social */}
           <div className='flex gap-6'>

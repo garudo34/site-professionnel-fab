@@ -3,8 +3,8 @@ import SectionTitle from '@/components/ui/SectionTitle'
 
 const services = [
   {
-    title: 'Site vitrine',
-    desc: 'Présence en ligne moderne, rapide et optimisée pour convertir.',
+    title: 'Création de site vitrine',
+    desc: 'Un site rapide et moderne pour présenter votre activité et générer des contacts.',
     icon: Monitor,
   },
   {
@@ -42,7 +42,7 @@ export default function Services() {
       <div className='container relative'>
         {/* Header */}
         <SectionTitle subtitle='Des solutions adaptées à vos besoins réels'>
-          Services
+          Services de développement web
         </SectionTitle>
         {/* Grid */}
         <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4'>

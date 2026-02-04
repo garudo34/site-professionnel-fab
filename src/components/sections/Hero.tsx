@@ -25,14 +25,20 @@ export default function Hero() {
               freelance
               <span className='absolute -bottom-1 left-0 h-[2px] w-full bg-gradient-to-r from-blue-500/80 to-transparent' />
             </span>
+            <br />
+            spécialisé en sites modernes et performants
           </h1>
 
           <p className='text-xl text-neutral-400 mb-10'>
-            Sites performants,{' '}
+            J’aide les indépendants et PME à créer des sites{' '}
             <span className='text-blue-400 drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]'>
-              modernes
+              rapides
+            </span>
+            ,{' '}
+            <span className='text-blue-400 drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]'>
+              clairs
             </span>{' '}
-            et sur-mesure pour indépendants et PME.
+            et orientés conversion.
           </p>
 
           <div className='grid grid-cols-1 md:flex gap-4'>

@@ -38,7 +38,7 @@ export default function Method() {
         {/* Header */}
 
         <SectionTitle subtitle='Une approche simple et efficace pour garantir des résultats fiables.'>
-          Méthode de travail
+          Une méthode claire pour des projets efficaces
         </SectionTitle>
 
         <div className='grid gap-8 md:grid-cols-4'>

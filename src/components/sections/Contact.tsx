@@ -1,7 +1,7 @@
 import SectionTitle from '@/components/ui/SectionTitle'
-import { Mail } from 'lucide-react'
+import ContactForm from '@/components/ui/ContactForm'
 
-export default function ContactSection() {
+export default function Contact() {
   return (
     <section
       id='contact'
@@ -48,16 +48,7 @@ export default function ContactSection() {
             Décrivez-moi brièvement votre projet, je vous répondrai dans les
             meilleurs délais.
           </p>
-
-          <a
-            href='mailto:contact@fabien.dev'
-            className='inline-flex items-center gap-3 rounded-xl
-              bg-blue-600 px-6 py-4 text-white font-medium
-              hover:bg-blue-500 transition'
-          >
-            <Mail size={20} />
-            contact@fabien.dev
-          </a>
+          <ContactForm />
         </div>
       </div>
     </section>

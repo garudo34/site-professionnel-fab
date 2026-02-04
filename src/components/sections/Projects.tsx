@@ -18,7 +18,7 @@ export default function Projects() {
         {/* Header */}
         <div className='mb-16 max-w-2xl'>
           <SectionTitle subtitle='Une sélection de projets récents réalisés pour des clients.'>
-            Réalisations
+            Projets réalisés pour indépendants et PME
           </SectionTitle>
         </div>
 

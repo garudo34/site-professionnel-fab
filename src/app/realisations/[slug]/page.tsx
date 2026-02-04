@@ -131,7 +131,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data } = getRealisationBySlug(slug)
 
   return {
-    title: `${data.title} | Développeur web freelance`,
+    title: `${data.title} | Création de site web`,
     description: data.description,
   }
 }
