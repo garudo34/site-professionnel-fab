@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer'
 import BackToTop from '@/components/ui/BackTotop'
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({
         {children}
         <BackToTop />
         <Footer />
+        <Analytics />
       </body>
     </html>
   )

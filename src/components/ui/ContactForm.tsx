@@ -3,6 +3,7 @@
 import { useState, useTransition } from 'react'
 import { sendContact } from '@/app/actions/contact'
 import Spinner from '@/components/ui/Spinner'
+import { track } from '@vercel/analytics'
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false)
@@ -12,6 +13,7 @@ export default function ContactForm() {
     startTransition(async () => {
       try {
         await sendContact(formData)
+        track('contact_form_submitted')
         setSent(true)
       } catch {
         alert('Une erreur est survenue. Réessayez.')
