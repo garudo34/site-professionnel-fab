@@ -4,7 +4,6 @@ import Footer from '@/components/layout/Footer'
 import BackToTop from '@/components/ui/BackTotop'
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,7 +18,8 @@ const space = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://fabien-peyres.fr'),
   title: {
-    default: 'Développeur web freelance | Sites performants & SEO',
+    default:
+      'Fabien Peyres | Développeur web freelance | Sites performants & SEO',
     template: '%s | Développeur web freelance',
   },
   description:
@@ -53,7 +53,6 @@ export default function RootLayout({
         {children}
         <BackToTop />
         <Footer />
-        <Analytics />
       </body>
     </html>
   )
