@@ -1,28 +1,71 @@
-import Container from '@/components/ui/Container'
+import { Monitor, ShoppingCart, Rocket, RefreshCcw } from 'lucide-react'
+import SectionTitle from '@/components/ui/SectionTitle'
+
+const services = [
+  {
+    title: 'Création de site vitrine',
+    desc: 'Un site rapide et moderne pour présenter votre activité et générer des contacts.',
+    icon: Monitor,
+  },
+  {
+    title: 'E-commerce',
+    desc: 'Boutiques performantes, sécurisées et faciles à gérer.',
+    icon: ShoppingCart,
+  },
+  {
+    title: 'Application web',
+    desc: 'Interfaces sur-mesure avec Next.js et une UX soignée.',
+    icon: Rocket,
+  },
+  {
+    title: 'Refonte & optimisation',
+    desc: 'Amélioration UX, performances et SEO de l’existant.',
+    icon: RefreshCcw,
+  },
+]
 
 export default function Services() {
   return (
-    <Container className='py-24 space-y-24'>
-      <h2 className='text-3xl font-semibold tracking-tight mb-10 text-center'>
-        Mes services
-      </h2>
-      <div className='grid md:grid-cols-3 gap-8'>
-        {[
-          'Site vitrine professionnel',
-          'SEO & performance',
-          'Refonte & optimisation',
-        ].map((service) => (
-          <div
-            key={service}
-            className='rounded-2xl border bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg'
-          >
-            <h3 className='text-xl font-semibold mb-2'>{service}</h3>
-            <p className='text-muted-foreground'>
-              Une solution adaptée à vos objectifs business.
-            </p>
-          </div>
-        ))}
+    <section
+      id='services'
+      className='relative bg-neutral-950 py-24 md:py-32 overflow-hidden'
+    >
+      <div
+        aria-hidden
+        className='pointer-events-none absolute inset-0 bg-[radial-gradient(800px_circle_at_top,rgba(59,130,246,0.25),transparent_60%)]'
+      />
+      <div
+        aria-hidden
+        className='pointer-events-none absolute inset-0 bg-[radial-gradient(600px_circle_at_bottom,rgba(59,130,246,0.1),transparent_70%)]'
+      />
+
+      <div className='container relative'>
+        {/* Header */}
+        <SectionTitle subtitle='Des solutions adaptées à vos besoins réels'>
+          Services de développement web
+        </SectionTitle>
+        {/* Grid */}
+        <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
+          {services.map((service) => {
+            const Icon = service.icon
+            return (
+              <div
+                key={service.title}
+                className='rounded-2xl bg-neutral-800 border border-white/15 p-8 text-center'
+              >
+                {/* Icon */}
+                <div className='mx-auto mb-1 flex h-14 w-14 items-center justify-center rounded-xl text-blue-400'>
+                  <Icon className='h-10 w-10 text-blue-400 mb-6' />
+                </div>
+
+                <h3 className='text-lg font-semibold mb-3'>{service.title}</h3>
+
+                <p className='text-sm text-neutral-200/80'>{service.desc}</p>
+              </div>
+            )
+          })}
+        </div>
       </div>
-    </Container>
+    </section>
   )
 }

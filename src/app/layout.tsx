@@ -1,6 +1,7 @@
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import BackToTop from '@/components/ui/BackTotop'
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
   },
   description:
     'Développeur web freelance spécialisé dans la création de sites vitrines modernes, rapides et optimisés SEO.',
+  // viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     title: 'Développeur web freelance',
     description: 'Sites web performants, modernes et orientés résultats.',
@@ -47,7 +49,8 @@ export default function RootLayout({
         className={`${inter.variable} ${space.variable} min-h-screen flex flex-col`}
       >
         <Header />
-        <main className='flex-1'>{children}</main>
+        {children}
+        <BackToTop />
         <Footer />
       </body>
     </html>
