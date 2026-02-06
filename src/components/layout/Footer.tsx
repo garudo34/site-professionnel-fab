@@ -41,7 +41,7 @@ export default function Footer() {
             </Link>
 
             <a
-              href='mailto:contact@fabien.dev'
+              href='mailto:contact@fabien-peyres.fr'
               className='hover:text-white transition'
             >
               Contact
