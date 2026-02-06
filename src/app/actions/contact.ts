@@ -15,8 +15,8 @@ export async function sendContact(formData: FormData) {
   }
 
   await resend.emails.send({
-    from: 'Contact <onboarding@resend.dev>',
-    to: ['fabien.peyres@free.fr'],
+    from: 'Contact <contact@fabien-peyres.fr>',
+    to: 'contact@fabien-peyres.fr',
     subject: `Nouveau message de ${name}`,
     replyTo: email,
     text: message,

@@ -16,7 +16,7 @@ const space = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tonnom.dev'),
+  metadataBase: new URL('https://fabien-peyres.fr'),
   title: {
     default: 'Développeur web freelance | Sites performants & SEO',
     template: '%s | Développeur web freelance',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Développeur web freelance',
     description: 'Sites web performants, modernes et orientés résultats.',
-    url: 'https://tonnom.dev',
-    siteName: 'TonNom.dev',
+    url: 'https://fabien-peyres.fr',
+    siteName: 'fabien-peyres.fr',
     locale: 'fr_FR',
     type: 'website',
   },

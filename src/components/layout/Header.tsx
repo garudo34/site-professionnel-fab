@@ -12,7 +12,7 @@ export default function Header() {
       <div className='container flex h-16 items-center justify-between'>
         {/* Logo */}
         <Link href='/#top' className='text-sm font-semibold tracking-wide'>
-          Fabien<span className='text-blue-500'>.</span>dev
+          fabien-peyres<span className='text-blue-500'>.</span>fr
         </Link>
 
         {/* Navigation desktop */}

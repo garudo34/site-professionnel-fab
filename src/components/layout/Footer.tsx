@@ -8,8 +8,8 @@ export default function Footer() {
         <div className='flex flex-col md:flex-row items-center justify-between gap-6 text-sm'>
           {/* Left */}
           <p className='text-xs'>
-            © {new Date().getFullYear()} Fabien — Développeur web freelance —
-            sites modernes et performants
+            © {new Date().getFullYear()} Fabien Peyres — Développeur web
+            freelance — sites modernes et performants
           </p>
 
           {/* Social */}
