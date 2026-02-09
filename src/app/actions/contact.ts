@@ -3,22 +3,35 @@
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
-console.log('EMAIL ENVOYÉ VIA RESEND')
 
 export async function sendContact(formData: FormData) {
   const name = formData.get('name') as string
   const email = formData.get('email') as string
   const message = formData.get('message') as string
 
+  const projectType = (formData.get('projectType') as string) || 'Non précisé'
+  const budget = (formData.get('budget') as string) || 'Non précisé'
+
   if (!name || !email || !message) {
-    throw new Error('Formulaire incomplet')
+    throw new Error('Champs manquants')
   }
 
   await resend.emails.send({
     from: 'Contact <contact@fabien-peyres.fr>',
     to: 'contact@fabien-peyres.fr',
-    subject: `Nouveau message de ${name}`,
     replyTo: email,
-    text: message,
+    subject: `[Contact] ${projectType} – ${budget}`,
+    text: `
+Nouveau message depuis le site
+
+Nom : ${name}
+Email : ${email}
+
+Type de projet : ${projectType}
+Budget estimé : ${budget}
+
+Message :
+${message}
+    `.trim(),
   })
 }
