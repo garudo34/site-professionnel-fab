@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Social */}
           <div className='flex gap-6'>
             <Link
-              href='https://linkedin.com'
+              href='https://www.linkedin.com/in/fabien-peyres-8108b64b/'
               target='_blank'
               className='transition hover:text-blue-500'
             >
@@ -23,7 +23,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              href='https://github.com'
+              href='https://github.com/garudo34'
               target='_blank'
               className='transition hover:text-blue-500'
             >
