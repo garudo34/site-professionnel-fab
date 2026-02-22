@@ -1,7 +1,7 @@
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import BackToTop from '@/components/ui/BackTotop'
+import BackToTop from '@/components/ui/BackToTop'
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 
