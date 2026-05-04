@@ -27,40 +27,40 @@ const services = [
 export default function Services() {
   return (
     <section
-      id='services'
-      className='relative bg-neutral-950 py-24 md:py-32 overflow-hidden'
+      id="services"
+      className="relative overflow-hidden bg-neutral-950 py-24 md:py-32"
     >
       <div
         aria-hidden
-        className='pointer-events-none absolute inset-0 bg-[radial-gradient(800px_circle_at_top,rgba(59,130,246,0.25),transparent_60%)]'
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_circle_at_top,rgba(59,130,246,0.25),transparent_60%)]"
       />
       <div
         aria-hidden
-        className='pointer-events-none absolute inset-0 bg-[radial-gradient(600px_circle_at_bottom,rgba(59,130,246,0.1),transparent_70%)]'
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(600px_circle_at_bottom,rgba(59,130,246,0.1),transparent_70%)]"
       />
 
-      <div className='container relative'>
+      <div className="relative container">
         {/* Header */}
-        <SectionTitle subtitle='Des solutions adaptées à vos besoins réels'>
+        <SectionTitle subtitle="Des solutions adaptées à vos besoins réels">
           Services de développement web
         </SectionTitle>
         {/* Grid */}
-        <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => {
             const Icon = service.icon
             return (
               <div
                 key={service.title}
-                className='rounded-2xl bg-neutral-800 border border-white/15 p-8 text-center'
+                className="rounded-2xl border border-white/15 bg-neutral-800 p-8 text-center"
               >
                 {/* Icon */}
-                <div className='mx-auto mb-1 flex h-14 w-14 items-center justify-center rounded-xl text-blue-400'>
-                  <Icon className='h-10 w-10 text-blue-400 mb-6' />
+                <div className="mx-auto mb-1 flex h-14 w-14 items-center justify-center rounded-xl text-blue-400">
+                  <Icon className="mb-6 h-10 w-10 text-blue-400" />
                 </div>
 
-                <h3 className='text-lg font-semibold mb-3'>{service.title}</h3>
+                <h3 className="mb-3 text-lg font-semibold">{service.title}</h3>
 
-                <p className='text-sm text-neutral-200/80'>{service.desc}</p>
+                <p className="text-sm text-neutral-200/80">{service.desc}</p>
               </div>
             )
           })}

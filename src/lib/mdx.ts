@@ -5,7 +5,7 @@ import { Realisation, RealisationFrontmatter } from '@/types/realisation'
 
 const realisationsDirectory = path.join(
   process.cwd(),
-  'src/content/realisations',
+  'src/content/realisations'
 )
 
 export function getAllRealisations(): Realisation[] {
@@ -46,7 +46,7 @@ export function getAdjacentRealisations(slug: string): {
   next?: Realisation
 } {
   const all = getAllRealisations().sort(
-    (a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime(),
+    (a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime()
   )
 
   const index = all.findIndex((r) => r.slug === slug)

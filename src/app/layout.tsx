@@ -45,9 +45,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='fr'>
+    <html lang="fr">
       <body
-        className={`${inter.variable} ${space.variable} min-h-screen flex flex-col`}
+        className={`${inter.variable} ${space.variable} flex min-h-screen flex-col`}
       >
         <Header />
         {children}

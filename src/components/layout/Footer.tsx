@@ -3,46 +3,46 @@ import { Github, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className='border-t border-white/10 bg-neutral-950/80 backdrop-blur'>
-      <div className='container py-8'>
-        <div className='flex flex-col md:flex-row items-center justify-between gap-6 text-sm'>
+    <footer className="border-t border-white/10 bg-neutral-950/80 backdrop-blur">
+      <div className="container py-8">
+        <div className="flex flex-col items-center justify-between gap-6 text-sm md:flex-row">
           {/* Left */}
-          <p className='text-xs'>
+          <p className="text-xs">
             © {new Date().getFullYear()} Fabien Peyres — Développeur web
             freelance — sites modernes et performants
           </p>
 
           {/* Social */}
-          <div className='flex gap-6'>
+          <div className="flex gap-6">
             <Link
-              href='https://www.linkedin.com/in/fabien-peyres-8108b64b/'
-              target='_blank'
-              className='transition hover:text-blue-500'
+              href="https://www.linkedin.com/in/fabien-peyres-8108b64b/"
+              target="_blank"
+              className="transition hover:text-blue-500"
             >
               <Linkedin size={18} />
             </Link>
 
             <Link
-              href='https://github.com/garudo34'
-              target='_blank'
-              className='transition hover:text-blue-500'
+              href="https://github.com/garudo34"
+              target="_blank"
+              className="transition hover:text-blue-500"
             >
               <Github size={18} />
             </Link>
           </div>
 
           {/* Right */}
-          <div className='flex gap-6'>
+          <div className="flex gap-6">
             <Link
-              href='/mentions-legales'
-              className='hover:text-white transition'
+              href="/mentions-legales"
+              className="transition hover:text-white"
             >
               Mentions légales
             </Link>
 
             <a
-              href='mailto:contact@fabien-peyres.fr'
-              className='hover:text-white transition'
+              href="mailto:contact@fabien-peyres.fr"
+              className="transition hover:text-white"
             >
               Contact
             </a>

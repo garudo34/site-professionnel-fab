@@ -21,86 +21,75 @@ export default function ContactForm() {
 
   if (sent) {
     return (
-      <p className='text-green-400'>
+      <p className="text-green-400">
         Merci pour votre message, je reviens vers vous rapidement.
       </p>
     )
   }
 
   return (
-    <form action={action} className='space-y-5 sm:space-y-6 max-w-xl'>
+    <form action={action} className="max-w-xl space-y-5 sm:space-y-6">
       <select
-        name='projectType'
+        name="projectType"
         required
-        aria-label='Type de projet'
-        className='w-full rounded-xl bg-neutral-900 border border-white/10 px-4 py-4 text-neutral-400
-               focus:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+        aria-label="Type de projet"
+        className="w-full rounded-xl border border-white/10 bg-neutral-900 px-4 py-4 text-neutral-400 focus:text-white focus:ring-2 focus:ring-blue-500/40 focus:outline-none"
       >
-        <option value=''>Type de projet</option>
-        <option value='site-vitrine'>Site vitrine</option>
-        <option value='site-ecommerce'>Site e-commerce</option>
-        <option value='application-web'>Application web</option>
-        <option value='refonte'>Refonte de site</option>
-        <option value='autre'>Autre</option>
+        <option value="">Type de projet</option>
+        <option value="site-vitrine">Site vitrine</option>
+        <option value="site-ecommerce">Site e-commerce</option>
+        <option value="application-web">Application web</option>
+        <option value="refonte">Refonte de site</option>
+        <option value="autre">Autre</option>
       </select>
 
       <select
-        name='budget'
+        name="budget"
         required
-        aria-label='Budget estimé'
-        className='w-full rounded-xl bg-neutral-900 border border-white/10 px-4 py-4 text-neutral-400
-               focus:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+        aria-label="Budget estimé"
+        className="w-full rounded-xl border border-white/10 bg-neutral-900 px-4 py-4 text-neutral-400 focus:text-white focus:ring-2 focus:ring-blue-500/40 focus:outline-none"
       >
-        <option value=''>Budget estimé</option>
-        <option value='<1000'>&lt; 1 000 €</option>
-        <option value='1000-3000'>1 000 – 3 000 €</option>
-        <option value='3000-5000'>3 000 – 5 000 €</option>
-        <option value='5000+'>5 000 € et +</option>
+        <option value="">Budget estimé</option>
+        <option value="<1000">&lt; 1 000 €</option>
+        <option value="1000-3000">1 000 – 3 000 €</option>
+        <option value="3000-5000">3 000 – 5 000 €</option>
+        <option value="5000+">5 000 € et +</option>
       </select>
 
       <input
-        name='name'
+        name="name"
         required
-        aria-label='Votre nom'
-        placeholder='Votre nom'
-        autoComplete='name'
-        inputMode='text'
-        className='w-full rounded-xl bg-neutral-900 border border-white/10 px-4 py-4 text-white
-               placeholder:text-neutral-500
-               focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+        aria-label="Votre nom"
+        placeholder="Votre nom"
+        autoComplete="name"
+        inputMode="text"
+        className="w-full rounded-xl border border-white/10 bg-neutral-900 px-4 py-4 text-white placeholder:text-neutral-500 focus:ring-2 focus:ring-blue-500/40 focus:outline-none"
       />
 
       <input
-        name='email'
-        type='email'
+        name="email"
+        type="email"
         required
-        aria-label='Votre email'
-        placeholder='Votre email'
-        autoComplete='email'
-        inputMode='email'
-        className='w-full rounded-xl bg-neutral-900 border border-white/10 px-4 py-4 text-white
-               placeholder:text-neutral-500
-               focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+        aria-label="Votre email"
+        placeholder="Votre email"
+        autoComplete="email"
+        inputMode="email"
+        className="w-full rounded-xl border border-white/10 bg-neutral-900 px-4 py-4 text-white placeholder:text-neutral-500 focus:ring-2 focus:ring-blue-500/40 focus:outline-none"
       />
 
       <textarea
-        name='message'
+        name="message"
         required
         rows={4}
-        aria-label='Message'
-        placeholder='Parlez-moi de votre projet'
-        className='w-full rounded-xl bg-neutral-900 border border-white/10 px-4 py-4 text-white
-               placeholder:text-neutral-500
-               focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+        aria-label="Message"
+        placeholder="Parlez-moi de votre projet"
+        className="w-full rounded-xl border border-white/10 bg-neutral-900 px-4 py-4 text-white placeholder:text-neutral-500 focus:ring-2 focus:ring-blue-500/40 focus:outline-none"
       />
 
       <button
-        type='submit'
+        type="submit"
         disabled={isPending}
-        className='w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl
-               bg-blue-600 px-6 py-4 font-medium text-white
-               transition hover:bg-blue-500
-               disabled:opacity-60 disabled:cursor-not-allowed'
+        className="inline-flex w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 py-4 font-medium text-white transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {isPending && <Spinner />}
         {isPending ? 'Envoi…' : 'Envoyer'}

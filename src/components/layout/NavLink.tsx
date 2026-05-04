@@ -19,7 +19,7 @@ export default function NavLink({ href, children, className }: Props) {
       href={href}
       className={clsx(
         'transition hover:text-black',
-        isActive ? 'text-black font-semibold' : 'text-muted-foreground',
+        isActive ? 'font-semibold text-black' : 'text-muted-foreground',
         className
       )}
     >
